@@ -10,6 +10,9 @@
 # Ejercicios con comprensión de listas
 
 
+from tkinter import X
+
+
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     
@@ -28,7 +31,13 @@ if __name__ == '__main__':
     # De la lista resultante informar cuantas personas/personal
     # comprendido en dicho rango pasó por ese molinete
 
-    # personal_1_10 = [.....]
+    personal_1_10 = [x for x in accesos if (x > 0 and x < 11)]
+
+    print(personal_1_10)
+
+    personal_filtrado = (len(personal_1_10))
+
+    print("La cantidad de personas/personal que estan comprendidas por dicho rango son", personal_filtrado)
 
     # 2)
     # Generar una lista por comprensión de la listas "accesos"
@@ -40,6 +49,8 @@ if __name__ == '__main__':
     # TIP: Utilizar el operador "in" para chequear si un ID de accesos está
     # dentro de "id_validos"
 
-    # personal_valido = [.....]
+    personal_valido = [ x for x in accesos if x in id_validos]
+
+    print(personal_valido)
 
     print("terminamos")
